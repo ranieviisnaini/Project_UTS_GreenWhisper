@@ -1,0 +1,188 @@
+/* --- PERBAIKAN STICKY FOOTER START --- */
+html, body {
+    height: 100%; 
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; 
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-content {
+    flex-grow: 1; /* PENTING: Membuat konten utama mengisi ruang kosong */
+}
+/* --- PERBAIKAN STICKY FOOTER END --- */
+
+
+/* Header Section */
+.main-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.main-header h1 .fas.fa-leaf {
+    margin-right: 10px;
+}
+
+.main-header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Container & Search Bar Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-bar {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    width: 60%;
+    max-width: 400px;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar button {
+    background-color: #66BB6A;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-bar button:hover {
+    background-color: #4CAF50;
+}
+
+/* Plant Gallery (Card Layout) */
+.plant-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.plant-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.plant-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+}
+
+.plant-card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.plant-card-content h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #388E3C;
+    font-weight: 600;
+}
+
+.plant-card-content p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.plant-card-content span {
+    display: block;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Loading State & Error */
+.loading-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.5em;
+    color: #777;
+}
+
+.loading-state .fas.fa-spinner {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+/* Footer Section */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    margin-top: auto; /* Memastikan dorongan ke bawah saat konten ada */
+}
+
+.main-footer .fas.fa-heart {
+    color: #FF5252;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5em;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar input[type="text"] {
+        width: 80%;
+    }
+    .plant-gallery {
+        grid-template-columns: 1fr;
+    }
+}
