@@ -1,7 +1,7 @@
 // =======================================================
 // PENTING: Ganti dengan API Key Trefle kamu:
 // =======================================================
-const TREFLE_API_KEY = "usr-zPHsJSDqbmpFJOpverrlW9bwidC8FUq-fiSmQL3aYgs"; // API KEY YANG KAMU BERIKAN
+const TREFLE_API_KEY = process.env.TREFLE_API_KEY; // API KEY YANG KAMU BERIKAN
 
 // Element HTML
 const plantGallery = document.getElementById('plantGallery');
